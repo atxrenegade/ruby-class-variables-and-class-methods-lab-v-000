@@ -32,23 +32,17 @@ class Song
     genre_count_hash = {}
    
     @@genres.each do |genre| 
-      binding.pry
-      genre_count = @@genres.find_all(genre)
-      binding.pry
-      genre_count_hash << genre_count
-      ####################################
+      if count_hash[genre] == nil 
+        count_hash[genre] = 1 
+      else 
+        count_hash[genre] += 1 
+      end
+      genre_count_hash
     end
-  genre_count_hash
-end
-  count_hash = {}
-array = ["black", "blue", "yellow", "red", "blue", "red", "red"]
+  end  
 
-array.each do |value|
-  if count_hash[value] == nil 
-    count_hash[value] = 1 
-  else 
-    count_hash[value] += 1 
-  end
+
+
 end 
 count_hash    
     
