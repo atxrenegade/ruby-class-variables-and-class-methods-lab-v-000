@@ -40,6 +40,19 @@ class Song
     end
     count_hash
   end  
+  
+  def self.artist_count
+    count_hash = {}
+    
+    @@artists.each do |artist| 
+      if count_hash[artist] == nil 
+        count_hash[artist] = 1 
+      else 
+        count_hash[artist] += 1 
+      end
+    end
+    count_hash
+  end  
 
 end  
 #You will need to check to see if the hash already contains a key of a particular genre.
