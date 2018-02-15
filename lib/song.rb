@@ -27,26 +27,20 @@ class Song
   def self.genres
     @@genres.uniq
   end 
-  def self.genre_count
   
+  def self.genre_count
     count_hash = {}
-   
+    
     @@genres.each do |genre| 
       if count_hash[genre] == nil 
         count_hash[genre] = 1 
       else 
         count_hash[genre] += 1 
       end
-      count_hash
+    count_hash
     end
   end  
 
-
-
-end 
-count_hash    
-    
-    
 end  
 #You will need to check to see if the hash already contains a key of a particular genre.
 #If so, increment the value of that key by one, otherwise, create a new key/value pair.
