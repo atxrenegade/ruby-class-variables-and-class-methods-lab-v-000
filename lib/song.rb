@@ -28,7 +28,7 @@ class Song
     @@genres.uniq
   end 
   def self.genre_count
-    unique_genres = @@genres.uniq 
+  
     genre_count_hash = {}
     #####################################
     unique_genres.each do |genre| 
@@ -40,7 +40,17 @@ class Song
     end
   genre_count_hash
 end
-      
+  count_hash = {}
+array = ["black", "blue", "yellow", "red", "blue", "red", "red"]
+
+array.each do |value|
+  if count_hash[value] == nil 
+    count_hash[value] = 1 
+  else 
+    count_hash[value] += 1 
+  end
+end 
+count_hash    
     
     
 end  
